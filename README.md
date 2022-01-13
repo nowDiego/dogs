@@ -3,7 +3,7 @@ Aplicação utilizando Vue 3, Vuex, LocalStorage e API Pública The dog Api
 
 ## npm install 
 COMO RODAR O PROJETO BAIXADO
-Instalar todas as dependencias indicada pelo composer.json
+Instalar todas as dependencias indicada pelo package.json
 
 
 ## npm run serve
