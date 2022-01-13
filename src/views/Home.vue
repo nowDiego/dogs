@@ -1,18 +1,49 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <List :list="breeds" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import List from "@/components/List.vue";
+import axios from "axios";
 
 export default {
-  name: 'Home',
+  name: "Home",
+
+  mounted() {
+    this.loadBreeds();
+  },
+
+  data() {
+    return {
+      breeds: null,
+      limit: 50,
+      page: 1,
+    };
+  },
+  methods: {
+    loadBreeds: function () {
+      let self = this;
+
+      axios
+        .get("https://api.thedogapi.com/v1/breeds", {
+          params: {
+            limit: this.limit,
+            page: this.page,
+          },
+        })
+        .then(function (response) {
+          console.log(response.data);
+          self.breeds = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+  },
   components: {
-    HelloWorld
-  }
-}
+    List,
+  },
+};
 </script>

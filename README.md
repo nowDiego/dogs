@@ -1,24 +1,17 @@
-# sisdog
+# Dogs
+Aplicação utilizando Vue 3, Vuex, LocalStorage e API Pública The dog Api  
 
-## Project setup
-```
-npm install
-```
+## npm install 
+COMO RODAR O PROJETO BAIXADO
+Instalar todas as dependencias indicada pelo composer.json
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## npm run serve
+Para iniciar o servidor local
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## http://localhost:8080/
+Para acessar a Aplicação
+
+## https://www.thedogapi.com/
+API Pública The dog Api
